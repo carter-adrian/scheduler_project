@@ -22,5 +22,31 @@ $("#hour-16 .description").val(localStorage.getItem("hour-16"));
 $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
 function hourTracker() {
-    
+    var currentHour = moment().hour(); 
+
+    $('.time-block').each(function(){
+        var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+        console.log(blockHour, currentHour)
+
+        if (blockHour < currentHour) {
+            $(this).addClass("past");
+            $(this).removeClass("present");
+            $(this).removeClass("future");
+        }
+
+        else if (blockHour === currentHour) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+            $(this).removeClass("future");
+
+        }
+
+        else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+        }
+    })
 }
+hourTracker();
+})

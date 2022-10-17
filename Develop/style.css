@@ -2,6 +2,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-image: url("Fall\ of\ Icarus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+    
 }
 
 textarea {
@@ -37,13 +41,13 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #06aed5;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: rgb(33, 49, 141);
   color: white;
 }
 
