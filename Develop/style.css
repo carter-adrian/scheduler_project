@@ -2,10 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  background-image: url("Fall\ of\ Icarus.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-    
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
 }
 
 textarea {
