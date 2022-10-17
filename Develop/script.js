@@ -10,7 +10,7 @@ $(document).ready(function () {// tells engine to load 1)html & 2)css first.
 
        localStorage.setItem(time, text);
    }) 
-//    load any saved data, possible for loop?
+//    load any saved data, possible 'for' loop?
 $("#hour-9 .description").val(localStorage.getItem("hour-9"));
 $("#hour-10 .description").val(localStorage.getItem("hour-10"));
 $("#hour-11 .description").val(localStorage.getItem("hour-11"));
@@ -30,20 +30,13 @@ function hourTracker() {
 
         if (blockHour < currentHour) {
             $(this).addClass("past");
-            $(this).removeClass("present");
-            $(this).removeClass("future");
         }
 
         else if (blockHour === currentHour) {
-            $(this).removeClass("past");
             $(this).addClass("present");
-            $(this).removeClass("future");
-
         }
 
         else {
-            $(this).removeClass("past");
-            $(this).removeClass("present");
             $(this).addClass("future");
         }
     })
