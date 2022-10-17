@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); // use of moment.js
+    $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); // moment.js
     $(".saveBtn").on("click", function () {
         console.log(this);
         var text = $(this).siblings(".description").val(); 
@@ -8,7 +8,6 @@ $(document).ready(function () {
         //set items in local storage.
         localStorage.setItem(time, text);
     })
-    //load any saved data from LocalStorage - do this for each hour created. Should follow html 24 hour to 12 hour conversion.
     $("#hour9 .description").val(localStorage.getItem("hour9"));
     $("#hour10 .description").val(localStorage.getItem("hour10"));
     $("#hour11 .description").val(localStorage.getItem("hour11"));
@@ -20,10 +19,8 @@ $(document).ready(function () {
     $("#hour17 .description").val(localStorage.getItem("hour17"));
 
     function hourTracker() {
-        //get current number of hours.
-        var currentHour = moment().hour(); // use of moment.js
+        var currentHour = moment().hour();
 
-        // loop over time blocks
         $(".time-block").each(function () {
             var blockHour = parseInt($(this).attr("id").split("hour")[1]);
             console.log( blockHour, currentHour)
