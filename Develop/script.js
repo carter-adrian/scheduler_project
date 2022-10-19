@@ -7,6 +7,13 @@ $(document).ready(function () {
 
         //set items in local storage.
         localStorage.setItem(time, text);
+
+        $('.notification').addClass('show');
+
+        setTimeout(function () {
+            $('.notification').removeClass('show');
+        }, 5000);
+        
     })
     $("#hour9 .description").val(localStorage.getItem("hour9"));
     $("#hour10 .description").val(localStorage.getItem("hour10"));
