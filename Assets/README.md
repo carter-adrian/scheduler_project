@@ -13,6 +13,8 @@ https://github.com/carter-adrian
 
 https://github.com/carter-adrian/scheduler_project
 
+https://carter-adrian.github.io/scheduler_project/
+
 
 
 Attached is a screenshot of the final application. Above are the github user profile and repo and final deployed URL:
